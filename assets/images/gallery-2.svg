@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg-gallery-2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0f16"/>
+      <stop offset="100%" stop-color="#181c26"/>
+    </linearGradient>
+    <linearGradient id="ic-gallery-2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#35d0ff"/>
+      <stop offset="100%" stop-color="#8b7bff"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg-gallery-2)"/>
+  <g transform="translate(60,60)" fill="none" stroke="url(#ic-gallery-2)" stroke-width="2"><circle cx="140" cy="80" r="70"/><polyline points="0,140 60,90 120,110 180,50 240,70" /></g>
+  <text x="200" y="270" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5" text-anchor="middle" fill="#565a66">GALLERY PLACEHOLDER</text>
+</svg>

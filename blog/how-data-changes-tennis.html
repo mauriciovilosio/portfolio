@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como los Datos Cambian el Tenis — Mauricio Vilosio</title>
+  <meta name="description" content="Por que la proxima generacion de grandes entrenadores de tenis tambien sabra de datos." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top: var(--space-8);">
+      <div class="container container--narrow">
+        <a href="index.html" class="project-hero__back" data-transition data-i18n="back.blog">&larr; Volver al blog</a>
+        <p class="eyebrow"><span data-i18n="page.category">Sports Analytics</span> · <span data-i18n="page.readTime">6 min de lectura</span></p>
+        <h1 class="section-title" data-i18n="page.title">Como los Datos Cambian el Tenis</h1>
+        <article style="margin-top: var(--space-4);" data-i18n-html="page.body">
+          <p>Durante la mayor parte de su historia, el coaching de tenis funciono con intuicion. Un buen entrenador mira miles de horas de partidos y desarrolla un olfato para lo que funciona; esto es experiencia real, construida durante anos, y no va a desaparecer.</p><p>Pero la intuicion tiene un punto ciego: esta construida a partir de lo que uno llego a notar, no a partir de la imagen completa. Un entrenador puede recordar el colapso dramatico de un jugador en un tiebreak del tercer set, pero no el patron mas silencioso de errores no forzados en el reves que en realidad lo predecia tres partidos antes.</p><p>Aca es donde los datos cambian la ecuacion. No reemplazando el ojo del entrenador, sino dandole un lente mas amplio. Un simple registro de estadisticas de partido (errores por tipo de golpe, rendimiento en break points, esfuerzo fisico a lo largo de los sets) convierte una temporada de impresiones vagas en una serie de datos comparables.</p><p>Los jugadores y entrenadores que adoptan esta mentalidad temprano no estan cambiando el feeling por planillas. Estan usando datos para hacer mejores preguntas en las sesiones que ya dan: no 'como se sintio', sino 'que dice realmente el patron de los ultimos diez partidos'.</p><p>Esa es la premisa detras de Mi Tenis: un sistema construido especificamente para que este tipo de seguimiento no requiera formacion en ciencia de datos, solo el habito de registrar, y dashboards que hacen el resto.</p><p>El futuro del coaching no sera datos reemplazando la intuicion. Sera entrenadores que puedan hacer ambas cosas.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "How Data Changes Tennis — Mauricio Vilosio", "meta.description": "Why the next generation of great tennis coaches will also be data-literate.", "page.category": "Sports Analytics", "page.readTime": "6 min read", "page.title": "How Data Changes Tennis", "page.body": "<p>For most of its history, tennis coaching has run on intuition. A good coach watches thousands of hours of matches and develops a feel for what works — this is real expertise, built over years, and it isn't going away.</p><p>But intuition has a blind spot: it's built from whatever you happened to notice, not from the full picture. A coach might remember a player's dramatic collapse in a third-set tiebreak, but not the quieter pattern of unforced errors on the backhand side that actually predicted it three matches earlier.</p><p>This is where data changes the equation. Not by replacing the coach's eye, but by giving it a wider lens. A simple log of match statistics — errors by shot type, performance on break points, physical output across sets — turns a season of vague impressions into a series of comparable data points.</p><p>The players and coaches who adopt this mindset early aren't trading feel for spreadsheets. They're using data to ask better questions during the sessions they already run: not 'how did that feel,' but 'what does the pattern across the last ten matches actually say.'</p><p>That's the premise behind Mi Tenis: a system built specifically so this kind of tracking doesn't require a data science background — just a habit of logging, and dashboards that do the rest.</p><p>The future of coaching won't be data replacing intuition. It'll be coaches who can do both.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

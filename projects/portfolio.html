@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Mauricio Vilosio</title>
+  <meta name="description" content="Las decisiones de diseno e ingenieria detras de este portfolio, construido como un producto, no como un curriculum." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="../blog/index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#projects" class="project-hero__back" data-transition data-i18n="back.projects">&larr; Volver a proyectos</a>
+        <p class="eyebrow" data-i18n="page.tag">Este sitio</p>
+        <h1 class="section-title" style="font-size: var(--fs-4xl);" data-i18n="page.title">Portfolio</h1>
+        <p class="section-subtitle" style="font-size: var(--fs-md); max-width: 70ch;" data-i18n="page.tagline">La idea detras de este sitio: por que se ve como se ve, y como fue construido.</p>
+
+        <div class="project-meta-grid">
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.role">Rol</p><p class="meta-item__value" data-i18n="page.role">Disenador y Desarrollador</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.timeline">Cronograma</p><p class="meta-item__value" data-i18n="page.timeline">2026</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.tools">Herramientas</p><p class="meta-item__value">HTML, CSS, JavaScript</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.status">Estado</p><p class="meta-item__value" data-i18n="page.status">En vivo</p></div>
+        </div>
+
+        <div class="project-body">
+          <article>
+            <h2 data-i18n="h.description">Descripción</h2>
+            <div data-i18n-html="page.description"><p>Este portfolio en si mismo es un proyecto: un intento deliberado de presentar a un Data Analyst que esta construyendo hacia Sports Analytics como un profesional con mentalidad de producto, no como un curriculum tradicional en formato web.</p></div>
+
+            <h2 data-i18n="h.problem">Problema</h2>
+            <div data-i18n-html="page.problem"><p>La mayoria de los portfolios en este espacio se leen como una vidriera generica de desarrollador o como un curriculum estatico. Ninguno de los dos comunica lo que realmente importa aca: alguien que piensa en modelos de datos, pero cuyo foco real es el rendimiento en tenis y la tecnologia deportiva.</p></div>
+
+            <h2 data-i18n="h.solution">Solución</h2>
+            <div data-i18n-html="page.solution"><p>Un diseno minimalista, oscuro y con glassmorphism inspirado en empresas de producto (Apple, Stripe, Linear, Vercel) en lugar de sitios personales tipicos, tratando secciones como Dashboard y Habilidades como superficies de producto literales (tarjetas de KPI, contadores con sensacion en vivo) en lugar de simples listas.</p></div>
+
+            <h2 data-i18n="h.process">Proceso</h2>
+            <div data-i18n-html="page.process"><ul><li>Defini la narrativa primero: un data analyst que se convierte en especialista en sports analytics</li><li>Disene un sistema de diseno basado en tokens (colores, espaciado, tipografia) para consistencia e iteracion facil</li><li>Construido con HTML, CSS y JS puro: sin paso de build, rapido de cargar, facil de alojar en GitHub Pages</li><li>Agregue movimiento (scroll reveals, KPIs animados, cursor personalizado) sin sacrificar performance</li></ul></div>
+
+            <h2 data-i18n="h.technologies">Tecnologías</h2>
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+
+            <h2 data-i18n="h.results">Resultados</h2>
+            <div data-i18n-html="page.results"><p>Un sitio rapido y sin dependencias que carga al instante, funciona sin un pipeline de build, y puede seguir creciendo: nuevos proyectos y posts de blog son solo archivos nuevos siguiendo la misma plantilla.</p></div>
+
+            <h2 data-i18n="h.gallery">Galería</h2>
+            <div class="gallery-grid">
+              <img src="../assets/images/gallery-1.svg" alt="Imagen del proyecto 1" loading="lazy" />
+              <img src="../assets/images/gallery-2.svg" alt="Imagen del proyecto 2" loading="lazy" />
+              <img src="../assets/images/gallery-3.svg" alt="Imagen del proyecto 3" loading="lazy" />
+              <img src="../assets/images/gallery-4.svg" alt="Imagen del proyecto 4" loading="lazy" />
+            </div>
+
+            <h2 data-i18n="h.learnings">Aprendizajes</h2>
+            <div data-i18n-html="page.learnings"><p>Las restricciones producen mejores decisiones de diseno que la libertad abierta: elegir sin framework y sin paso de build forzo una estructura mas limpia y mantenible que recurrir a React por defecto.</p></div>
+          </article>
+
+          <aside class="glass-card project-sidebar">
+            <div>
+              <p class="meta-item__label" data-i18n="sidebar.stack">Stack</p>
+              <div class="project-card__stack" style="margin-top:.5rem;"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+            </div>
+            <a href="../index.html#projects" class="btn btn--secondary" data-transition data-i18n="sidebar.allProjects">&larr; Todos los proyectos</a>
+            <a href="../index.html#contact" class="btn btn--primary" data-transition data-i18n="sidebar.discuss">Hablar de este proyecto</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Portfolio — Mauricio Vilosio", "meta.description": "The design and engineering decisions behind this portfolio — built as a product, not a resume.", "page.tag": "This Site", "page.title": "Portfolio", "page.tagline": "The thinking behind this site: why it looks the way it does, and how it was built.", "page.role": "Designer & Developer", "page.timeline": "2026", "page.status": "Live", "page.description": "<p>This portfolio itself is a project: a deliberate attempt to present a Data Analyst who is building toward Sports Analytics as a product-minded professional, not a traditional CV in website form.</p>", "page.problem": "<p>Most portfolios in this space read as either a generic developer showcase or a static resume. Neither communicates what actually matters here: someone who thinks in data models, but whose real focus is tennis performance and sports technology.</p>", "page.solution": "<p>A minimalist, dark, glassmorphic design inspired by product companies (Apple, Stripe, Linear, Vercel) rather than typical personal sites — treating sections like Dashboard and Skills as literal product surfaces (KPI cards, live-feeling counters) rather than plain lists.</p>", "page.process": "<ul><li>Defined the narrative first: data analyst becoming a sports analytics specialist</li><li>Designed a token-based design system (colors, spacing, type) for consistency and easy iteration</li><li>Built with plain HTML/CSS/JS — no build step, fast to load, easy to host on GitHub Pages</li><li>Layered in motion (scroll reveals, animated KPIs, custom cursor) without sacrificing performance</li></ul>", "page.results": "<p>A fast, dependency-free site that loads instantly, works without a build pipeline, and can keep growing — new projects and blog posts are just new files following the same template.</p>", "page.learnings": "<p>Constraints produce better design decisions than open-ended freedom: choosing 'no framework, no build step' forced a cleaner, more maintainable structure than reaching for React by default would have.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

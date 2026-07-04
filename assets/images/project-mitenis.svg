@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="bg-project-mitenis" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0f16"/>
+      <stop offset="100%" stop-color="#161a24"/>
+    </linearGradient>
+    <linearGradient id="ic-project-mitenis" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4ff3f"/>
+      <stop offset="100%" stop-color="#8b7bff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg-project-mitenis)"/>
+  <rect x="1" y="1" width="638" height="398" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+  <circle cx="320" cy="150" r="55" fill="none" stroke="url(#ic-project-mitenis)" stroke-width="3"/><path d="M275 120 Q320 150 275 180" fill="none" stroke="url(#ic-project-mitenis)" stroke-width="2"/><path d="M365 120 Q320 150 365 180" fill="none" stroke="url(#ic-project-mitenis)" stroke-width="2"/><polyline points="240,240 280,200 320,220 360,170 400,190" fill="none" stroke="url(#ic-project-mitenis)" stroke-width="3"/>
+  <text x="320" y="360" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" text-anchor="middle" fill="#6b7280">IMAGE PLACEHOLDER — MI TENIS APP</text>
+</svg>

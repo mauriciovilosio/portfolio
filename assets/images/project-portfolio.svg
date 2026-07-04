@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="bg-project-portfolio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0f16"/>
+      <stop offset="100%" stop-color="#161a24"/>
+    </linearGradient>
+    <linearGradient id="ic-project-portfolio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4ff3f"/>
+      <stop offset="100%" stop-color="#35d0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg-project-portfolio)"/>
+  <rect x="1" y="1" width="638" height="398" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+  <g stroke="url(#ic-project-portfolio)" stroke-width="2" fill="none"><rect x="230" y="90" width="180" height="130" rx="10"/><line x1="230" y1="112" x2="410" y2="112"/><circle cx="245" cy="101" r="3" fill="url(#ic-project-portfolio)" stroke="none"/><circle cx="257" cy="101" r="3" fill="url(#ic-project-portfolio)" stroke="none" opacity="0.6"/></g>
+  <text x="320" y="360" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" text-anchor="middle" fill="#6b7280">IMAGE PLACEHOLDER — PORTFOLIO</text>
+</svg>

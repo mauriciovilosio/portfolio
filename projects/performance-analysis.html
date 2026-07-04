@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisis de Rendimiento — Mauricio Vilosio</title>
+  <meta name="description" content="Analisis estadistico partido a partido del rendimiento en tenis, revelando patrones que un entrenador no puede ver desde el lateral." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="../blog/index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#projects" class="project-hero__back" data-transition data-i18n="back.projects">&larr; Volver a proyectos</a>
+        <p class="eyebrow" data-i18n="page.tag">Sports Analytics</p>
+        <h1 class="section-title" style="font-size: var(--fs-4xl);" data-i18n="page.title">Analisis de Rendimiento</h1>
+        <p class="section-subtitle" style="font-size: var(--fs-md); max-width: 70ch;" data-i18n="page.tagline">Desgloses estadisticos partido a partido que revelan los patrones detras de las victorias, derrotas, y todo lo demas.</p>
+
+        <div class="project-meta-grid">
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.role">Rol</p><p class="meta-item__value" data-i18n="page.role">Analista y Entrenador</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.timeline">Cronograma</p><p class="meta-item__value" data-i18n="page.timeline">En curso</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.tools">Herramientas</p><p class="meta-item__value">Statistics, Excel, Data Visualization</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.status">Estado</p><p class="meta-item__value" data-i18n="page.status">Activo</p></div>
+        </div>
+
+        <div class="project-body">
+          <article>
+            <h2 data-i18n="h.description">Descripción</h2>
+            <div data-i18n-html="page.description"><p>Un enfoque estructurado para analizar el rendimiento de un jugador mas alla del resultado final: errores no forzados por tipo de golpe, rendimiento bajo presion (break points, tiebreaks), y esfuerzo fisico a lo largo de un partido o temporada.</p></div>
+
+            <h2 data-i18n="h.problem">Problema</h2>
+            <div data-i18n-html="page.problem"><p>Los entrenadores miran los partidos en vivo y confian en la memoria y el instinto para identificar que salio mal. Patrones pequenos pero repetidos, como una caida en la derecha bajo presion o un rendimiento fisico que decae en el tercer set, son faciles de pasar por alto sin un seguimiento estructurado.</p></div>
+
+            <h2 data-i18n="h.solution">Solución</h2>
+            <div data-i18n-html="page.solution"><p>Un framework liviano de estadisticas para registrar eventos clave del partido durante el juego, y luego visualizarlos despues para detectar patrones recurrentes entre partidos, no solo momentos aislados.</p></div>
+
+            <h2 data-i18n="h.process">Proceso</h2>
+            <div data-i18n-html="page.process"><ul><li>Definir los eventos que vale la pena registrar (errores, winners, break points, duracion de los puntos)</li><li>Registrar datos durante o inmediatamente despues de los partidos para mantener la precision</li><li>Agregar datos entre partidos para separar momentos puntuales de patrones reales</li><li>Visualizar tendencias para que el jugador y el entrenador las revisen juntos</li></ul></div>
+
+            <h2 data-i18n="h.technologies">Tecnologías</h2>
+            <span class="chip">Statistics</span><span class="chip">Excel</span><span class="chip">Visualization</span>
+
+            <h2 data-i18n="h.results">Resultados</h2>
+            <div data-i18n-html="page.results"><p>Feedback concreto y especifico reemplazo las impresiones genericas post-partido: los jugadores pudieron ver exactamente que situaciones les costaban puntos a lo largo de una temporada, no solo un mal dia puntual.</p></div>
+
+            <h2 data-i18n="h.gallery">Galería</h2>
+            <div class="gallery-grid">
+              <img src="../assets/images/gallery-1.svg" alt="Imagen del proyecto 1" loading="lazy" />
+              <img src="../assets/images/gallery-2.svg" alt="Imagen del proyecto 2" loading="lazy" />
+              <img src="../assets/images/gallery-3.svg" alt="Imagen del proyecto 3" loading="lazy" />
+              <img src="../assets/images/gallery-4.svg" alt="Imagen del proyecto 4" loading="lazy" />
+            </div>
+
+            <h2 data-i18n="h.learnings">Aprendizajes</h2>
+            <div data-i18n-html="page.learnings"><p>El valor no esta en registrar todo, esta en registrar las pocas metricas que realmente cambian un plan de entrenamiento. Sobre-instrumentar un partido hace el analisis mas lento sin hacerlo mejor.</p></div>
+          </article>
+
+          <aside class="glass-card project-sidebar">
+            <div>
+              <p class="meta-item__label" data-i18n="sidebar.stack">Stack</p>
+              <div class="project-card__stack" style="margin-top:.5rem;"><span class="chip">Statistics</span><span class="chip">Excel</span><span class="chip">Visualization</span></div>
+            </div>
+            <a href="../index.html#projects" class="btn btn--secondary" data-transition data-i18n="sidebar.allProjects">&larr; Todos los proyectos</a>
+            <a href="../index.html#contact" class="btn btn--primary" data-transition data-i18n="sidebar.discuss">Hablar de este proyecto</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Análisis de Rendimiento — Mauricio Vilosio", "meta.description": "Match-by-match statistical analysis of tennis performance, surfacing patterns coaches can't see from the sideline.", "page.tag": "Sports Analytics", "page.title": "Performance Analysis", "page.tagline": "Match-by-match statistical breakdowns that reveal the patterns behind wins, losses, and everything in between.", "page.role": "Analyst & Coach", "page.timeline": "Ongoing", "page.status": "Active", "page.description": "<p>A structured approach to analyzing player performance beyond the final score: unforced errors by shot type, performance under pressure (break points, tiebreaks), and physical output across a match or season.</p>", "page.problem": "<p>Coaches watch matches live and rely on memory and instinct to identify what went wrong. Small but repeated patterns, like a breakdown on the backhand under pressure or fading physical output in the third set, are easy to miss without structured tracking.</p>", "page.solution": "<p>A lightweight statistics framework for logging key match events during play, then visualizing them afterward to spot recurring patterns across matches, not just isolated moments.</p>", "page.process": "<ul><li>Define the events worth tracking (errors, winners, break points, rally length)</li><li>Log data during or immediately after matches to keep it accurate</li><li>Aggregate across matches to separate one-off moments from real patterns</li><li>Visualize trends for the player and coach to review together</li></ul>", "page.results": "<p>Concrete, specific feedback replaced generic post-match impressions — players could see exactly which situations were costing them points across a season, not just a single bad day.</p>", "page.learnings": "<p>The value isn't in tracking everything — it's in tracking the few metrics that actually change a training plan. Over-instrumenting a match makes analysis slower without making it better.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

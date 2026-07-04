@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisis de Entrenamiento — Mauricio Vilosio</title>
+  <meta name="description" content="Leer un bloque de entrenamiento como un dataset en lugar de un diario." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top: var(--space-8);">
+      <div class="container container--narrow">
+        <a href="index.html" class="project-hero__back" data-transition data-i18n="back.blog">&larr; Volver al blog</a>
+        <p class="eyebrow"><span data-i18n="page.category">Entrenamiento</span> · <span data-i18n="page.readTime">5 min de lectura</span></p>
+        <h1 class="section-title" data-i18n="page.title">Analisis de Entrenamiento</h1>
+        <article style="margin-top: var(--space-4);" data-i18n-html="page.body">
+          <p>La mayoria de los registros de entrenamiento son diarios: un registro de lo que paso, escrito para leerse una vez y despues olvidarse. El analisis de entrenamiento le hace una pregunta distinta a la misma informacion: que dice este bloque de sesiones cuando se lo mira como un todo, no una entrada a la vez.</p><p>El cambio es pequeno pero poderoso. En lugar de 'buena sesion hoy', el registro captura unos pocos campos consistentes (area de foco, intensidad, y una medida simple de resultado) en cada sesion de un bloque de entrenamiento. Individualmente, ninguna de esas entradas significa mucho. Juntas, a lo largo de cuatro o seis semanas, empiezan a mostrar una forma.</p><p>Esa forma es lo que un diario no puede mostrar: si el volumen de un bloque de entrenamiento realmente se corresponde con lo que se vio en el proximo torneo, si un area de foco tecnico esta evolucionando en la direccion correcta, o si la fatiga se esta acumulando silenciosamente a lo largo de un bloque antes de aparecer como un mal resultado.</p><p>Esto no requiere herramientas complejas. Una planilla estructurada con los mismos tres o cuatro campos, mantenida de forma consistente a lo largo de un bloque de entrenamiento, alcanza para empezar a ver patrones que la memoria pura pasaria por alto.</p><p>El objetivo no es sobre-medir el entrenamiento; es asegurarse de que cuando un entrenador o jugador pregunte 'este bloque realmente esta funcionando', haya una respuesta real en lugar de una suposicion.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Training Analysis — Mauricio Vilosio", "meta.description": "Reading a training block like a dataset instead of a diary.", "page.category": "Training", "page.readTime": "5 min read", "page.title": "Training Analysis", "page.body": "<p>Most training logs are diaries: a record of what happened, written to be read once and then forgotten. Training analysis asks a different question of the same information — what does this block of sessions say when you look at it as a whole, not one entry at a time.</p><p>The shift is small but powerful. Instead of 'good session today,' the log captures a few consistent fields — focus area, intensity, and a simple outcome measure — across every session in a training block. Individually, none of those entries mean much. Together, over four or six weeks, they start to show a shape.</p><p>That shape is what a diary can't show you: whether the volume of a training block actually matches what showed up in the next tournament, whether a technical focus area is trending in the right direction, or whether fatigue is quietly building across a training block before it shows up as a bad result.</p><p>This doesn't require complex tools. A structured spreadsheet with the same three or four fields, kept consistently across a training block, is enough to start seeing patterns that pure memory would miss.</p><p>The goal isn't to over-measure training — it's to make sure that when a coach or player asks 'is this block actually working,' there's a real answer instead of a guess.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

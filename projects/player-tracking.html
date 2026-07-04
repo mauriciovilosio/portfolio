@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Seguimiento de Jugadores — Mauricio Vilosio</title>
+  <meta name="description" content="Un sistema estructurado de seguimiento de jugadores para registrar sesiones de entrenamiento y progreso en toda una academia de tenis." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="../blog/index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#projects" class="project-hero__back" data-transition data-i18n="back.projects">&larr; Volver a proyectos</a>
+        <p class="eyebrow" data-i18n="page.tag">Sports Tech</p>
+        <h1 class="section-title" style="font-size: var(--fs-4xl);" data-i18n="page.title">Sistema de Seguimiento de Jugadores</h1>
+        <p class="section-subtitle" style="font-size: var(--fs-md); max-width: 70ch;" data-i18n="page.tagline">Una forma estructurada de registrar sesiones de entrenamiento, asistencia y progreso en todo un grupo de jugadores.</p>
+
+        <div class="project-meta-grid">
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.role">Rol</p><p class="meta-item__value" data-i18n="page.role">Entrenador y Disenador del Sistema</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.timeline">Cronograma</p><p class="meta-item__value" data-i18n="page.timeline">2023 - En curso</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.tools">Herramientas</p><p class="meta-item__value">Data Pipeline, KPIs, Excel</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.status">Estado</p><p class="meta-item__value" data-i18n="page.status">En uso</p></div>
+        </div>
+
+        <div class="project-body">
+          <article>
+            <h2 data-i18n="h.description">Descripción</h2>
+            <div data-i18n-html="page.description"><p>Un sistema de seguimiento construido para gestionar multiples jugadores en una academia: asistencia, foco de la sesion, desarrollo fisico y progreso tecnico, en una estructura consistente en lugar de cuadernos separados por entrenador.</p></div>
+
+            <h2 data-i18n="h.problem">Problema</h2>
+            <div data-i18n-html="page.problem"><p>Con varios entrenadores trabajando con grupos de jugadores superpuestos, las notas de progreso estaban dispersas e eran inconsistentes. No habia una forma facil de ver el desarrollo de un jugador a lo largo de meses, solo fragmentos de quien fuera el entrenador que dio esa sesion.</p></div>
+
+            <h2 data-i18n="h.solution">Solución</h2>
+            <div data-i18n-html="page.solution"><p>Un registro compartido y estructurado para cada sesion de entrenamiento: quien asistio, que se trabajo, y una calificacion simple de progreso por area de habilidad, consolidado en KPIs por jugador a los que cualquier entrenador del equipo puede acceder al instante.</p></div>
+
+            <h2 data-i18n="h.process">Proceso</h2>
+            <div data-i18n-html="page.process"><ul><li>Defini un formato de registro de sesion minimo y rapido de completar que los entrenadores realmente usarian</li><li>Estructure los datos para que se consoliden limpiamente en KPIs por jugador y por grupo</li><li>Construi vistas simples para responder donde esta este jugador respecto a hace tres meses</li></ul></div>
+
+            <h2 data-i18n="h.technologies">Tecnologías</h2>
+            <span class="chip">Data Pipeline</span><span class="chip">KPIs</span><span class="chip">Excel</span>
+
+            <h2 data-i18n="h.results">Resultados</h2>
+            <div data-i18n-html="page.results"><p>Cualquier entrenador puede ahora ver el historial de un jugador en segundos en lugar de preguntar por ahi. Las conversaciones de desarrollo con jugadores (y sus padres) estan respaldadas por un registro real en lugar de impresiones generales.</p></div>
+
+            <h2 data-i18n="h.gallery">Galería</h2>
+            <div class="gallery-grid">
+              <img src="../assets/images/gallery-1.svg" alt="Imagen del proyecto 1" loading="lazy" />
+              <img src="../assets/images/gallery-2.svg" alt="Imagen del proyecto 2" loading="lazy" />
+              <img src="../assets/images/gallery-3.svg" alt="Imagen del proyecto 3" loading="lazy" />
+              <img src="../assets/images/gallery-4.svg" alt="Imagen del proyecto 4" loading="lazy" />
+            </div>
+
+            <h2 data-i18n="h.learnings">Aprendizajes</h2>
+            <div data-i18n-html="page.learnings"><p>Un sistema de seguimiento solo funciona si es mas rapido completarlo que saltearlo. La simplicidad en la carga de datos importa mas que la riqueza del modelo de datos.</p></div>
+          </article>
+
+          <aside class="glass-card project-sidebar">
+            <div>
+              <p class="meta-item__label" data-i18n="sidebar.stack">Stack</p>
+              <div class="project-card__stack" style="margin-top:.5rem;"><span class="chip">Data Pipeline</span><span class="chip">KPIs</span><span class="chip">Excel</span></div>
+            </div>
+            <a href="../index.html#projects" class="btn btn--secondary" data-transition data-i18n="sidebar.allProjects">&larr; Todos los proyectos</a>
+            <a href="../index.html#contact" class="btn btn--primary" data-transition data-i18n="sidebar.discuss">Hablar de este proyecto</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Sistema de Seguimiento de Jugadores — Mauricio Vilosio", "meta.description": "A structured player-tracking system to log training sessions and progress across an entire tennis academy.", "page.tag": "Sports Tech", "page.title": "Player Tracking System", "page.tagline": "A structured way to track training sessions, attendance and progress across an entire group of players.", "page.role": "Coach & System Designer", "page.timeline": "2023 — Ongoing", "page.status": "In use", "page.description": "<p>A tracking system built to manage multiple players across an academy — attendance, session focus, physical development and technical progress — in one consistent structure instead of separate notebooks per coach.</p>", "page.problem": "<p>With several coaches working with overlapping groups of players, progress notes were scattered and inconsistent. There was no easy way to see a player's development over months, only fragments from whichever coach happened to run that session.</p>", "page.solution": "<p>A shared, structured log for every training session — who attended, what was worked on, and a simple progress rating per skill area — rolled up into per-player KPIs any coach on the team can reference instantly.</p>", "page.process": "<ul><li>Defined a minimal, fast-to-fill session log format coaches would actually use</li><li>Structured the data so it rolls up cleanly into per-player and per-group KPIs</li><li>Built simple views for 'where is this player relative to three months ago'</li></ul>", "page.results": "<p>Any coach can now pick up a player's history in seconds instead of asking around. Development conversations with players (and their parents) are backed by a real record instead of general impressions.</p>", "page.learnings": "<p>A tracking system only works if it's faster to fill out than to skip. Simplicity in data entry matters more than richness of the data model.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

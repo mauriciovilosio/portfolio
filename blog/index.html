@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Mauricio Vilosio</title>
+  <meta name="description" content="Notas sobre Data Analytics, Sports Analytics y Rendimiento en Tenis por Mauricio Vilosio." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top: var(--space-8);">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="blog.eyebrow">Escritura</p>
+          <h1 class="section-title" data-i18n="blog.h1">Blog</h1>
+          <p class="section-subtitle" data-i18n="blog.subtitle">Notas sobre datos, deporte y el espacio entre ambos — donde el analytics se encuentra con la cancha.</p>
+        </div>
+
+        <div class="blog-grid">
+          <a class="glass-card blog-card reveal" href="how-data-changes-tennis.html" data-transition>
+            <p class="blog-card__meta"><span data-i18n="blog.cat1">Sports Analytics</span><span data-i18n="blog.read1">6 min de lectura</span></p>
+            <h2 class="blog-card__title" data-i18n="blog.post1.title">Cómo los Datos Cambian el Tenis</h2>
+            <p class="blog-card__excerpt" data-i18n="blog.post1.excerpt">Por qué la próxima generación de grandes entrenadores también sabrá de datos.</p>
+          </a>
+          <a class="glass-card blog-card reveal" href="power-bi-for-coaches.html" data-transition>
+            <p class="blog-card__meta"><span>Power BI</span><span data-i18n="blog.read2">8 min de lectura</span></p>
+            <h2 class="blog-card__title" data-i18n="blog.post2.title">Power BI para Entrenadores</h2>
+            <p class="blog-card__excerpt" data-i18n="blog.post2.excerpt">Una guía práctica para construir tu primer dashboard de rendimiento.</p>
+          </a>
+          <a class="glass-card blog-card reveal" href="sports-analytics.html" data-transition>
+            <p class="blog-card__meta"><span data-i18n="blog.cat3">Analytics</span><span data-i18n="blog.read3">7 min de lectura</span></p>
+            <h2 class="blog-card__title" data-i18n="blog.post3.title">Sports Analytics, Explicado</h2>
+            <p class="blog-card__excerpt" data-i18n="blog.post3.excerpt">Qué cubre realmente el campo, más allá de la palabra de moda.</p>
+          </a>
+          <a class="glass-card blog-card reveal" href="training-analysis.html" data-transition>
+            <p class="blog-card__meta"><span data-i18n="blog.cat4">Entrenamiento</span><span data-i18n="blog.read4">5 min de lectura</span></p>
+            <h2 class="blog-card__title" data-i18n="blog.post4.title">Análisis de Entrenamiento</h2>
+            <p class="blog-card__excerpt" data-i18n="blog.post4.excerpt">Leer un bloque de entrenamiento como un dataset en lugar de un diario.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.PAGE_I18N = {
+      en: {
+        "meta.title": "Blog — Mauricio Vilosio",
+        "meta.description": "Notes on Data Analytics, Sports Analytics and Tennis Performance by Mauricio Vilosio.",
+        "blog.eyebrow": "Writing",
+        "blog.h1": "Blog",
+        "blog.subtitle": "Notes on data, sport and the space in between — where analytics meets the court.",
+        "blog.cat1": "Sports Analytics",
+        "blog.cat3": "Analytics",
+        "blog.cat4": "Training",
+        "blog.read1": "6 min read",
+        "blog.read2": "8 min read",
+        "blog.read3": "7 min read",
+        "blog.read4": "5 min read",
+        "blog.post1.title": "How Data Changes Tennis",
+        "blog.post1.excerpt": "Why the next generation of great coaches will also be data-literate.",
+        "blog.post2.title": "Power BI for Coaches",
+        "blog.post2.excerpt": "A practical guide to building your first performance dashboard.",
+        "blog.post3.title": "Sports Analytics, Explained",
+        "blog.post3.excerpt": "What the field actually covers, beyond the buzzword.",
+        "blog.post4.title": "Training Analysis",
+        "blog.post4.excerpt": "Reading a training block like a dataset instead of a diary."
+      }
+    };
+  </script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="bg-project-ballrecycling" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0f16"/>
+      <stop offset="100%" stop-color="#161a24"/>
+    </linearGradient>
+    <linearGradient id="ic-project-ballrecycling" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#d4ff3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg-project-ballrecycling)"/>
+  <rect x="1" y="1" width="638" height="398" fill="none" stroke="#ffffff" stroke-opacity="0.06"/>
+  <circle cx="320" cy="150" r="45" fill="none" stroke="url(#ic-project-ballrecycling)" stroke-width="3"/><g fill="none" stroke="url(#ic-project-ballrecycling)" stroke-width="3"><path d="M395 150 a75 75 0 1 1 -15 -45" marker-end="none"/></g>
+  <text x="320" y="360" font-family="Arial, sans-serif" font-size="12" letter-spacing="2" text-anchor="middle" fill="#6b7280">IMAGE PLACEHOLDER — REUTILIZACION DE PELOTAS</text>
+</svg>

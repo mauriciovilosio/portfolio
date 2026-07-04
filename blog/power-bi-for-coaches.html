@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power BI para Entrenadores — Mauricio Vilosio</title>
+  <meta name="description" content="Una guia practica para construir tu primer dashboard de rendimiento de tenis en Power BI." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top: var(--space-8);">
+      <div class="container container--narrow">
+        <a href="index.html" class="project-hero__back" data-transition data-i18n="back.blog">&larr; Volver al blog</a>
+        <p class="eyebrow"><span data-i18n="page.category">Power BI</span> · <span data-i18n="page.readTime">8 min de lectura</span></p>
+        <h1 class="section-title" data-i18n="page.title">Power BI para Entrenadores</h1>
+        <article style="margin-top: var(--space-4);" data-i18n-html="page.body">
+          <p>No hace falta ser Data Analyst para sacarle valor real a Power BI como entrenador. Hacen falta tres cosas: datos consistentes, una pregunta clara, y una hora para construir tu primer reporte.</p><p>Empeza por los datos. Lo que sea que estes registrando hoy (un cuaderno, una planilla, incluso una desprolija) es un punto de partida. El unico requisito es la consistencia: registra los mismos campos en cada sesion o partido, aunque sean solo tres columnas (fecha, rival, resultado) para empezar.</p><p>Despues, elegi una pregunta que realmente quieras responder. No 'mostrame todo', sino algo especifico: 'como cambia la tasa de victorias de mi jugador en polvo de ladrillo versus cancha dura', o 'que sesiones se correlacionan con mejores resultados en torneos dos semanas despues'. Un dashboard construido alrededor de una pregunta real es mas util que uno construido para lucir cada grafico posible.</p><p>En Power BI, eso normalmente significa una tabla de entradas crudas, un par de columnas calculadas (resultado como bandera victoria/derrota, superficie como categoria), y dos o tres visuales: una linea de tendencia en el tiempo, un grafico de barras comparativo, y una tabla simple para el detalle subyacente.</p><p>Resisti la tentacion de agregar mas graficos antes de haber usado los primeros tres. El valor de un dashboard se nota en la reunion despues del partido, cuando podes responder una pregunta en cinco segundos en lugar de recorrer un cuaderno.</p><p>Una vez que ese habito se instala, todo lo demas (actualizacion automatica, medidas DAX mas avanzadas, filtrar por jugador o temporada) es solo iteracion sobre una base que ya funciona.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Power BI for Coaches — Mauricio Vilosio", "meta.description": "A practical guide to building your first tennis performance dashboard in Power BI.", "page.category": "Power BI", "page.readTime": "8 min read", "page.title": "Power BI for Coaches", "page.body": "<p>You don't need to be a Data Analyst to get real value from Power BI as a coach. You need three things: consistent data, a clear question, and about an hour to build your first report.</p><p>Start with the data. Whatever you're tracking today — a notebook, a spreadsheet, even a messy one — is a starting point. The only requirement is consistency: log the same fields for every session or match, even if it's just three columns (date, opponent, result) to begin with.</p><p>Next, pick one question you actually want answered. Not 'show me everything,' but something specific: 'how does my player's win rate change on clay versus hard court,' or 'which sessions correlate with better tournament results two weeks later.' A dashboard built around one real question is more useful than one built to show off every possible chart.</p><p>In Power BI, that usually means one table of raw entries, a couple of calculated columns (result as a win/loss flag, surface as a category), and two or three visuals: a trend line over time, a comparison bar chart, and a simple table for the underlying detail.</p><p>Resist the urge to add more charts before you've used the first three. The value of a dashboard shows up in the meeting after the match, when you can answer a question in five seconds instead of scrolling through a notebook.</p><p>Once that habit sticks, everything else — automated refresh, more advanced DAX measures, filtering by player or season — is just iteration on a foundation that already works.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

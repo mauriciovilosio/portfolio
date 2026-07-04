@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reutilizacion de Pelotas de Tenis — Mauricio Vilosio</title>
+  <meta name="description" content="Investigacion sobre productos de segunda vida y sostenibles hechos con pelotas de tenis usadas." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="../blog/index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#projects" class="project-hero__back" data-transition data-i18n="back.projects">&larr; Volver a proyectos</a>
+        <p class="eyebrow" data-i18n="page.tag">Economia Circular - Sostenibilidad</p>
+        <h1 class="section-title" style="font-size: var(--fs-4xl);" data-i18n="page.title">Reutilizacion de Pelotas</h1>
+        <p class="section-subtitle" style="font-size: var(--fs-md); max-width: 70ch;" data-i18n="page.tagline">Investigando que pasa con una pelota de tenis despues de su vida util de juego, y en que podria convertirse en cambio.</p>
+
+        <div class="project-meta-grid">
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.role">Rol</p><p class="meta-item__value" data-i18n="page.role">Investigador</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.timeline">Cronograma</p><p class="meta-item__value" data-i18n="page.timeline">En curso</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.tools">Herramientas</p><p class="meta-item__value">Research, Sustainability Frameworks</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.status">Estado</p><p class="meta-item__value" data-i18n="page.status">Fase de investigacion</p></div>
+        </div>
+
+        <div class="project-body">
+          <article>
+            <h2 data-i18n="h.description">Descripción</h2>
+            <div data-i18n-html="page.description"><p>Una investigacion en curso sobre aplicaciones de economia circular para pelotas de tenis usadas: un producto que se descarta constantemente en clubes y torneos, casi siempre terminando en relleno sanitario.</p></div>
+
+            <h2 data-i18n="h.problem">Problema</h2>
+            <div data-i18n-html="page.problem"><p>El tenis produce un flujo significativo y constante de pelotas muertas sin un canal de reutilizacion formal en la mayoria de las comunidades locales de tenis. El material (nucleo de goma, cobertura de fieltro) tiene un potencial de reutilizacion real que en su mayoria se desperdicia.</p></div>
+
+            <h2 data-i18n="h.solution">Solución</h2>
+            <div data-i18n-html="page.solution"><p>Investigando iniciativas globales existentes y ciencia de materiales alrededor de pelotas de tenis reutilizadas (desde superficies deportivas hasta aplicaciones acusticas y de amortiguacion), y evaluando que es realmente replicable a nivel de un club o academia local.</p></div>
+
+            <h2 data-i18n="h.process">Proceso</h2>
+            <div data-i18n-html="page.process"><ul><li>Mapear a donde van a parar actualmente las pelotas usadas en clubes y torneos locales</li><li>Investigar iniciativas de reciclaje y reutilizacion existentes en todo el mundo</li><li>Evaluar aplicaciones de reutilizacion a pequena escala viables (protectores para patas de silla, ayudas de entrenamiento, material de superficie)</li><li>Evaluar la logistica de recoleccion en los torneos y academias que ya organizo</li></ul></div>
+
+            <h2 data-i18n="h.technologies">Tecnologías</h2>
+            <span class="chip">Research</span><span class="chip">Sustainability</span><span class="chip">Circular Economy</span>
+
+            <h2 data-i18n="h.results">Resultados</h2>
+            <div data-i18n-html="page.results"><p>Etapa temprana: mapeo inicial del volumen de pelotas de torneos locales completado, y una lista corta de aplicaciones de reutilizacion a pequena escala identificadas para pruebas piloto.</p></div>
+
+            <h2 data-i18n="h.gallery">Galería</h2>
+            <div class="gallery-grid">
+              <img src="../assets/images/gallery-1.svg" alt="Imagen del proyecto 1" loading="lazy" />
+              <img src="../assets/images/gallery-2.svg" alt="Imagen del proyecto 2" loading="lazy" />
+              <img src="../assets/images/gallery-3.svg" alt="Imagen del proyecto 3" loading="lazy" />
+              <img src="../assets/images/gallery-4.svg" alt="Imagen del proyecto 4" loading="lazy" />
+            </div>
+
+            <h2 data-i18n="h.learnings">Aprendizajes</h2>
+            <div data-i18n-html="page.learnings"><p>Los proyectos de sostenibilidad en el deporte triunfan o fracasan por la logistica, no por la intencion: la parte mas dificil no es encontrar un uso para pelotas viejas, es construir un habito de recoleccion a nivel del club.</p></div>
+          </article>
+
+          <aside class="glass-card project-sidebar">
+            <div>
+              <p class="meta-item__label" data-i18n="sidebar.stack">Stack</p>
+              <div class="project-card__stack" style="margin-top:.5rem;"><span class="chip">Research</span><span class="chip">Sustainability</span><span class="chip">Circular Economy</span></div>
+            </div>
+            <a href="../index.html#projects" class="btn btn--secondary" data-transition data-i18n="sidebar.allProjects">&larr; Todos los proyectos</a>
+            <a href="../index.html#contact" class="btn btn--primary" data-transition data-i18n="sidebar.discuss">Hablar de este proyecto</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Reutilización de Pelotas de Tenis — Mauricio Vilosio", "meta.description": "Research into second-life, sustainable products made from used tennis balls.", "page.tag": "Circular Economy · Sustainability", "page.title": "Ball Recycling", "page.tagline": "Researching what happens to a tennis ball after its playing life ends — and what it could become instead.", "page.role": "Researcher", "page.timeline": "Ongoing", "page.status": "Research phase", "page.description": "<p>An ongoing investigation into circular-economy applications for used tennis balls — a product that's discarded constantly at clubs and tournaments, almost always ending up in landfill.</p>", "page.problem": "<p>Tennis produces a significant, steady stream of dead balls with essentially no formal reuse channel in most local tennis communities. The material (rubber core, felt cover) has real reuse potential that mostly goes to waste.</p>", "page.solution": "<p>Researching existing global initiatives and materials science around reused tennis balls (from sports surfacing to acoustic and cushioning applications), and evaluating what's realistically replicable at a local club or academy level.</p>", "page.process": "<ul><li>Map where used balls in local clubs and tournaments currently end up</li><li>Research existing recycling/reuse initiatives worldwide</li><li>Evaluate feasible small-scale applications (chair leg protectors, training aids, surfacing material)</li><li>Assess logistics of collection at the tournaments and academies I already run</li></ul>", "page.results": "<p>Early-stage: initial mapping of ball volume from local tournaments completed, and a shortlist of viable small-scale reuse applications identified for pilot testing.</p>", "page.learnings": "<p>Sustainability projects in sport succeed or fail on logistics, not intent — the hardest part isn't finding a use for old balls, it's building a collection habit at the club level.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

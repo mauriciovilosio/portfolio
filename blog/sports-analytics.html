@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Analytics, Explicado — Mauricio Vilosio</title>
+  <meta name="description" content="Que cubre realmente el Sports Analytics, mas alla de la palabra de moda." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top: var(--space-8);">
+      <div class="container container--narrow">
+        <a href="index.html" class="project-hero__back" data-transition data-i18n="back.blog">&larr; Volver al blog</a>
+        <p class="eyebrow"><span data-i18n="page.category">Analytics</span> · <span data-i18n="page.readTime">7 min de lectura</span></p>
+        <h1 class="section-title" data-i18n="page.title">Sports Analytics, Explicado</h1>
+        <article style="margin-top: var(--space-4);" data-i18n-html="page.body">
+          <p>"Sports Analytics" se usa para describir desde el grafico de probabilidad de victoria de un canal de television hasta todo el departamento de ciencia de datos de un equipo profesional, lo que hace facil descartarlo como una palabra de moda. No lo es: es simplemente un campo amplio.</p><p>En su nucleo, sports analytics es la misma disciplina que el analisis de negocios, aplicada a un tipo distinto de datos: recolectar informacion de rendimiento, estructurarla, y usarla para tomar mejores decisiones de las que la intuicion sola produciria.</p><p>En deportes de equipo, eso muchas veces significa datasets grandes: tracking de jugadores, formaciones tacticas, estadisticas de enfrentamientos a lo largo de una liga. En deportes individuales como el tenis, la escala es menor pero las preguntas son igual de reales: como cambia el rendimiento de un jugador bajo presion, entre superficies, o a lo largo de una temporada de partidos.</p><p>Las herramientas se superponen fuertemente con el analisis de datos tradicional: SQL y planillas para los datos en si, Power BI o herramientas similares para visualizacion, y cada vez mas, modelos estadisticos simples para cualquier cosa mas alla de una linea de tendencia basica. El conjunto de habilidades es transferible, y por eso los analistas que pasan de negocios a deportes suelen adaptarse mas rapido de lo esperado.</p><p>Lo que es distinto es la audiencia. Un dashboard de negocio lo lee gente fluida en KPIs. Un dashboard deportivo lo leen entrenadores y jugadores cuya experiencia esta en el juego en si, no en los datos, lo que hace que la claridad y la simplicidad sean una vara mucho mas alta que en la mayoria del reporting corporativo.</p><p>Esa es la habilidad real en sports analytics: no construir el modelo mas sofisticado, sino construir el mas simple en el que un entrenador realmente confie y use.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Sports Analytics, Explained — Mauricio Vilosio", "meta.description": "What Sports Analytics actually covers, beyond the buzzword.", "page.category": "Analytics", "page.readTime": "7 min read", "page.title": "Sports Analytics, Explained", "page.body": "<p>\"Sports Analytics\" gets used to describe everything from a broadcaster's win-probability graphic to a professional team's entire data science department, which makes it easy to dismiss as a buzzword. It isn't — it's just a wide field.</p><p>At its core, sports analytics is the same discipline as business analytics, applied to a different kind of data: collecting performance information, structuring it, and using it to make better decisions than intuition alone would produce.</p><p>In team sports, that often means large datasets — player tracking, tactical formations, matchup statistics across a league. In individual sports like tennis, the scale is smaller but the questions are just as real: how does a player's performance change under pressure, across surfaces, or over a season of matches.</p><p>The tools overlap heavily with traditional data analytics: SQL and spreadsheets for the data itself, Power BI or similar tools for visualization, and increasingly, simple statistical models for anything beyond a basic trend line. The skill set is transferable — which is exactly why analysts moving from business into sports tend to ramp up faster than expected.</p><p>What's different is the audience. A business dashboard is read by people fluent in KPIs. A sports dashboard is read by coaches and players whose expertise is in the game itself, not in data — which makes clarity and simplicity a much higher bar than in most corporate reporting.</p><p>That's the real skill in sports analytics: not building the most sophisticated model, but building the simplest one that a coach will actually trust and use.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

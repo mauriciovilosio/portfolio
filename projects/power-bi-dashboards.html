@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power BI Dashboards — Mauricio Vilosio</title>
+  <meta name="description" content="Dashboards ejecutivos y operativos de Power BI construidos para reemplazar planillas dispersas por una unica fuente de verdad." />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav is-scrolled">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">MAURICIO<span>.</span>VILOSIO</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="../index.html#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="../index.html#timeline" data-i18n="nav.journey">Trayectoria</a>
+        <a href="../index.html#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="../index.html#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+        <a href="../index.html#skills" data-i18n="nav.skills">Habilidades</a>
+        <a href="../blog/index.html" data-i18n="nav.blog">Blog</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang-switch" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <a href="../index.html#contact" class="btn btn--secondary btn--sm" data-i18n="nav.cta">Hablemos</a>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section project-hero">
+      <div class="container">
+        <a href="../index.html#projects" class="project-hero__back" data-transition data-i18n="back.projects">&larr; Volver a proyectos</a>
+        <p class="eyebrow" data-i18n="page.tag">Data Analytics</p>
+        <h1 class="section-title" style="font-size: var(--fs-4xl);" data-i18n="page.title">Power BI Dashboards</h1>
+        <p class="section-subtitle" style="font-size: var(--fs-md); max-width: 70ch;" data-i18n="page.tagline">Convirtiendo planillas fragmentadas en dashboards en vivo, listos para tomar decisiones, para equipos de operaciones y liderazgo.</p>
+
+        <div class="project-meta-grid">
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.role">Rol</p><p class="meta-item__value" data-i18n="page.role">Data Analyst</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.timeline">Cronograma</p><p class="meta-item__value" data-i18n="page.timeline">2021 - En curso</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.tools">Herramientas</p><p class="meta-item__value">Power BI, DAX, SQL</p></div>
+          <div class="glass-card meta-item"><p class="meta-item__label" data-i18n="meta.status">Estado</p><p class="meta-item__value" data-i18n="page.status">En produccion</p></div>
+        </div>
+
+        <div class="project-body">
+          <article>
+            <h2 data-i18n="h.description">Descripción</h2>
+            <div data-i18n-html="page.description"><p>Un trabajo recurrente construyendo dashboards de Power BI para equipos que tomaban decisiones a partir de planillas estaticas actualizadas manualmente. Cada dashboard reemplazo horas de reporting manual por una vista en vivo y de autoservicio del negocio.</p><p>El alcance fue desde trackers de KPI para un solo departamento hasta dashboards ejecutivos que consolidaban ventas, operaciones y datos financieros en un solo modelo.</p></div>
+
+            <h2 data-i18n="h.problem">Problema</h2>
+            <div data-i18n-html="page.problem"><p>Los reportes vivian en archivos de Excel desconectados, actualizados de forma inconsistente e interpretados de manera distinta por cada equipo que los tocaba. El liderazgo tomaba decisiones con numeros que muchas veces tenian una semana de atraso, sin una definicion compartida de lo que realmente significaba cada metrica.</p></div>
+
+            <h2 data-i18n="h.solution">Solución</h2>
+            <div data-i18n-html="page.solution"><p>Disene un modelo de datos centralizado por area de negocio, con una unica definicion acordada para cada KPI. Construi reportes interactivos de Power BI sobre ese modelo, con drill-downs, filtros y actualizaciones automaticas que reemplazaron las exportaciones estaticas.</p></div>
+
+            <h2 data-i18n="h.process">Proceso</h2>
+            <div data-i18n-html="page.process"><ul><li>Entreviste a los stakeholders para definir las preguntas reales que el dashboard necesitaba responder</li><li>Modele los datos (esquema estrella, relaciones, tablas calculadas) para performance y claridad</li><li>Escribi medidas DAX para KPIs, tendencias y comparaciones contra periodos anteriores</li><li>Disene el reporte para la audiencia: un clic a la respuesta, no diez</li><li>Automatice la actualizacion de datos via Power Query y gateways programados</li></ul></div>
+
+            <h2 data-i18n="h.technologies">Tecnologías</h2>
+            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">SQL</span><span class="chip">Power Query</span><span class="chip">Excel</span>
+
+            <h2 data-i18n="h.results">Resultados</h2>
+            <div data-i18n-html="page.results"><p>El tiempo de reporting bajo de dias a minutos para la mayoria de los equipos. Los dashboards se volvieron la referencia por defecto en las reuniones semanales, reemplazando las exportaciones ad-hoc de planillas y reduciendo las discusiones sobre cual numero es el correcto.</p></div>
+
+            <h2 data-i18n="h.gallery">Galería</h2>
+            <div class="gallery-grid">
+              <img src="../assets/images/gallery-1.svg" alt="Imagen del proyecto 1" loading="lazy" />
+              <img src="../assets/images/gallery-2.svg" alt="Imagen del proyecto 2" loading="lazy" />
+              <img src="../assets/images/gallery-3.svg" alt="Imagen del proyecto 3" loading="lazy" />
+              <img src="../assets/images/gallery-4.svg" alt="Imagen del proyecto 4" loading="lazy" />
+            </div>
+
+            <h2 data-i18n="h.learnings">Aprendizajes</h2>
+            <div data-i18n-html="page.learnings"><p>La parte mas dificil de un dashboard rara vez es el DAX: es lograr que los stakeholders se pongan de acuerdo sobre que significa una metrica antes de construir un solo visual. La disciplina de modelado de datos al principio ahorra mucho mas tiempo que optimizar visuales despues.</p></div>
+          </article>
+
+          <aside class="glass-card project-sidebar">
+            <div>
+              <p class="meta-item__label" data-i18n="sidebar.stack">Stack</p>
+              <div class="project-card__stack" style="margin-top:.5rem;"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">SQL</span><span class="chip">Power Query</span><span class="chip">Excel</span></div>
+            </div>
+            <a href="../index.html#projects" class="btn btn--secondary" data-transition data-i18n="sidebar.allProjects">&larr; Todos los proyectos</a>
+            <a href="../index.html#contact" class="btn btn--primary" data-transition data-i18n="sidebar.discuss">Hablar de este proyecto</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy" data-i18n-copy="footer.copy">© 2026 Mauricio Vilosio. Construido con datos, tenis y HTML.</p>
+      <div class="footer__links">
+        <a href="https://www.linkedin.com/in/mauriciovilosio/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vilomauricio" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:mvilosiog@gmail.com" data-i18n="social.email">Correo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>window.PAGE_I18N = {"en": {"meta.title": "Power BI Dashboards — Mauricio Vilosio", "meta.description": "Executive and operational Power BI dashboards built to replace scattered spreadsheets with a single source of truth.", "page.tag": "Data Analytics", "page.title": "Power BI Dashboards", "page.tagline": "Turning fragmented spreadsheets into live, decision-ready dashboards for operations and leadership teams.", "page.role": "Data Analyst", "page.timeline": "2021 — Ongoing", "page.status": "In production", "page.description": "<p>A recurring engagement building Power BI dashboards for teams that were making decisions from static, manually-updated spreadsheets. Each dashboard replaced hours of manual reporting with a live, self-service view of the business.</p><p>Scope ranged from single-department KPI trackers to executive dashboards consolidating sales, operations and financial data into one model.</p>", "page.problem": "<p>Reports lived in disconnected Excel files, updated inconsistently and interpreted differently by every team that touched them. Leadership was making decisions on numbers that were often a week out of date, with no shared definition of what a metric actually meant.</p>", "page.solution": "<p>Designed a centralized data model per business area, with a single, agreed-upon definition for every KPI. Built interactive Power BI reports on top of that model — drill-downs, filters and automated refreshes replaced static exports.</p>", "page.process": "<ul><li>Interviewed stakeholders to define the real questions the dashboard needed to answer</li><li>Modeled the data (star schema, relationships, calculated tables) for performance and clarity</li><li>Wrote DAX measures for KPIs, trends and comparisons against prior periods</li><li>Designed the report for the audience — one click to the answer, not ten</li><li>Automated data refresh via Power Query and scheduled gateways</li></ul>", "page.results": "<p>Reporting time dropped from days to minutes for most teams. Dashboards became the default reference in weekly meetings, replacing ad-hoc spreadsheet exports and reducing disagreements over 'whose number is right.'</p>", "page.learnings": "<p>The hardest part of a dashboard is rarely the DAX — it's getting stakeholders to agree on what a metric means before a single visual gets built. Data modeling discipline upfront saves far more time than optimizing visuals later.</p>"}};</script>
+  <script src="../js/cursor.js"></script>
+  <script src="../js/particles.js"></script>
+  <script src="../js/scrollReveal.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>
