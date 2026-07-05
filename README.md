@@ -24,13 +24,7 @@ mauricio-vilosio-portfolio/
 │                               #   Dashboard/KPIs → Skills → Vision →
 │                               #   Process → Blog preview → Contact → Footer
 ├── projects/                  # One standalone page per featured project
-│   ├── power-bi-dashboards.html
 │   ├── mi-tenis.html
-│   ├── torneo-arroyito.html
-│   ├── performance-analysis.html
-│   ├── player-tracking.html
-│   ├── ball-recycling.html
-│   ├── string-recycling.html
 │   └── portfolio.html
 ├── blog/                      # Blog scaffold, ready to grow
 │   ├── index.html
@@ -170,5 +164,5 @@ MIT — see [LICENSE](LICENSE).
 ## 📬 Contact
 
 - LinkedIn: [linkedin.com/in/mauriciovilosio](https://www.linkedin.com/in/mauriciovilosio/)
-- GitHub: [github.com/vilomauricio](https://github.com/vilomauricio)
+- GitHub: [github.com/mauriciovilosio](https://github.com/mauriciovilosio)
 - Email: mvilosiog@gmail.com
