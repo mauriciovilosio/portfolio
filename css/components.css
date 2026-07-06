@@ -865,6 +865,10 @@
   color: var(--color-success);
 }
 
+.form-status.error {
+  color: #ff6b6b;
+}
+
 /* ---------- Footer ---------- */
 .footer {
   padding-block: var(--space-5);
