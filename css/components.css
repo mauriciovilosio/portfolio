@@ -250,9 +250,13 @@
 
 .hero__grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: var(--space-6);
   align-items: center;
+}
+
+.hero__copy {
+  max-width: 62ch;
 }
 
 .hero__eyebrow {

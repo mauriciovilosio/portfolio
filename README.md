@@ -102,11 +102,10 @@ How it works, if you need to add or edit copy:
 
 ## 🖼️ Replacing placeholders
 
-Nothing here is a real photo — everything in `assets/images/` is an SVG placeholder so the repo works out of the box with zero external assets.
+Everything in `assets/images/` is an SVG placeholder so the repo works out of the box with zero external assets. The hero section is intentionally photo-free (text-only by design).
 
-1. **Hero photo**: replace `assets/images/hero-placeholder.svg` with a real photo (`hero-photo.jpg`, 4:5 ratio recommended) and update the `<img src>` in `index.html`'s `.hero__visual`.
-2. **Project cards**: each `assets/images/project-*.svg` maps to one card in `index.html` and the matching page in `projects/`. Swap the file, keep the name, or update the `<img src>` references.
-3. **Galleries**: each project page reuses four generic `assets/images/gallery-*.svg` tiles. Replace with real screenshots per project as they become available.
+1. **Project cards**: each `assets/images/project-*.svg` maps to one card in `index.html` and the matching page in `projects/`. Swap the file, keep the name, or update the `<img src>` references.
+2. **Galleries**: each project page reuses four generic `assets/images/gallery-*.svg` tiles. Replace with real screenshots per project as they become available.
 
 ---
 
