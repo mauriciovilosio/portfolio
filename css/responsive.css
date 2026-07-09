@@ -77,6 +77,14 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .lightbox {
+    padding: var(--space-2);
+  }
+
+  .lightbox__media img {
+    max-height: 65vh;
+  }
 }
 
 @media (max-width: 480px) {
@@ -104,5 +112,20 @@
 
   .court-wrap {
     aspect-ratio: 4/5;
+  }
+
+  .lightbox__close {
+    width: 36px;
+    height: 36px;
+    top: var(--space-2);
+    right: var(--space-2);
+  }
+
+  .lightbox__media img {
+    max-height: 55vh;
+  }
+
+  .lightbox__title {
+    font-size: var(--fs-md);
   }
 }

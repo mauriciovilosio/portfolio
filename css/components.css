@@ -787,6 +787,165 @@
   border-radius: var(--radius-full);
 }
 
+/* ---------- Data Viz Showcase (Galería) ---------- */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+.showcase-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-3);
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.showcase-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.showcase-card:focus-visible {
+  outline: 2px solid var(--color-accent-cyan);
+  outline-offset: 3px;
+}
+
+.showcase-card__media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  margin-bottom: var(--space-2);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.showcase-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out-quart);
+}
+
+.showcase-card:hover .showcase-card__media img {
+  transform: scale(1.05);
+}
+
+.showcase-card__tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-1);
+}
+
+.showcase-card__title {
+  font-size: var(--fs-md);
+  margin-bottom: 0.4rem;
+}
+
+.showcase-card__desc {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Lightbox (used by the Galería showcase) ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  background: rgba(8, 9, 13, 0.92);
+  backdrop-filter: var(--glass-blur);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--duration-base) var(--ease-out-quart);
+}
+
+.lightbox.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__inner {
+  width: 100%;
+  max-width: min(94vw, 980px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  overflow-y: auto;
+}
+
+.lightbox__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg-elevated);
+  padding: var(--space-1);
+}
+
+.lightbox__media img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(80vh, 1100px);
+  border-radius: calc(var(--radius-md) - 4px);
+}
+
+.lightbox__title {
+  font-size: var(--fs-lg);
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.lightbox__caption {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+}
+
+.lightbox__close {
+  position: fixed;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox__close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.lightbox__close:hover {
+  background: var(--color-surface-hover);
+}
+
 /* ---------- Contact ---------- */
 .contact__layout {
   display: grid;
