@@ -7,7 +7,11 @@
  * A card can point to more than one image by listing comma-separated
  * paths in data-img (used for stories told across 2+ images) — they're
  * stacked in the lightbox and the whole thing scrolls if needed.
- * Close via the X button, clicking the overlay, or Escape.
+ * Close via the X button, clicking the overlay, Escape, or the device's
+ * back gesture/button — opening pushes a dummy history entry so "back"
+ * closes the lightbox instead of leaving the page (mobile browsers treat
+ * the back gesture as browser-back by default, which would otherwise
+ * exit the whole site from inside the lightbox).
  */
 (function () {
   const triggers = document.querySelectorAll("[data-lightbox-trigger]");
@@ -36,6 +40,7 @@
   const captionEl = lightbox.querySelector(".lightbox__caption");
   const closeBtn = lightbox.querySelector(".lightbox__close");
   let lastFocused = null;
+  let historyPushed = false;
 
   function open(trigger) {
     const paths = (trigger.getAttribute("data-img") || "")
@@ -59,23 +64,41 @@
     lightbox.classList.add("is-active");
     document.body.style.overflow = "hidden";
     closeBtn.focus();
+
+    // Push a dummy history entry so the back button/gesture closes the
+    // lightbox instead of navigating away from the page.
+    if (!historyPushed) {
+      history.pushState({ mvLightbox: true }, "", window.location.href);
+      historyPushed = true;
+    }
   }
 
-  function close() {
+  function close(fromPopstate) {
+    if (!lightbox.classList.contains("is-active")) return;
     lightbox.classList.remove("is-active");
     document.body.style.overflow = "";
     if (lastFocused) lastFocused.focus();
+
+    if (historyPushed) {
+      historyPushed = false;
+      // Only go back ourselves if the close wasn't already triggered by
+      // the back button/gesture (that already popped the history entry).
+      if (!fromPopstate) history.back();
+    }
   }
 
   triggers.forEach((trigger) => {
     trigger.addEventListener("click", () => open(trigger));
   });
 
-  closeBtn.addEventListener("click", close);
+  closeBtn.addEventListener("click", () => close(false));
   lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
+    if (e.target === lightbox) close(false);
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && lightbox.classList.contains("is-active")) close();
+    if (e.key === "Escape" && lightbox.classList.contains("is-active")) close(false);
+  });
+  window.addEventListener("popstate", () => {
+    if (lightbox.classList.contains("is-active")) close(true);
   });
 })();
