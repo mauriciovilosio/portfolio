@@ -1,10 +1,18 @@
 /**
  * gallery.js
- * Lightbox for the "Galería" data-viz showcase on the homepage.
- * Click a card (any element with [data-lightbox-trigger]) to see the full
- * infographic, with its title + context pulled straight from the card
- * itself (so it always matches the active language via i18n.js).
- * A card can point to more than one image by listing comma-separated
+ * Lightbox for image click-to-enlarge across the site: the "Galería"
+ * data-viz showcase on the homepage, and the simple photo grids on
+ * project pages (any [data-lightbox-trigger] element opens it).
+ *
+ * Two flavors of trigger are supported, auto-detected per element:
+ *  - Showcase cards (.showcase-card): title + caption come from the
+ *    card's .showcase-card__title / .showcase-card__desc, so they match
+ *    the active language via i18n.js.
+ *  - Plain gallery items (.gallery-grid__item wrapping an <img>): no
+ *    title/caption markup, so the lightbox just shows the image full
+ *    size (falling back to the img's alt text as the title) and hides
+ *    the empty title/caption area.
+ * A trigger can point to more than one image by listing comma-separated
  * paths in data-img (used for stories told across 2+ images) — they're
  * stacked in the lightbox and the whole thing scrolls if needed.
  * Close via the X button, clicking the overlay, Escape, or the device's
@@ -27,7 +35,7 @@
     "</button>",
     '<div class="lightbox__inner">',
     '<div class="lightbox__media"></div>',
-    "<div>",
+    '<div class="lightbox__meta">',
     '<h3 class="lightbox__title"></h3>',
     '<p class="lightbox__caption"></p>',
     "</div>",
@@ -36,6 +44,7 @@
   document.body.appendChild(lightbox);
 
   const mediaEl = lightbox.querySelector(".lightbox__media");
+  const metaEl = lightbox.querySelector(".lightbox__meta");
   const titleEl = lightbox.querySelector(".lightbox__title");
   const captionEl = lightbox.querySelector(".lightbox__caption");
   const closeBtn = lightbox.querySelector(".lightbox__close");
@@ -47,7 +56,10 @@
       .split(",")
       .map((s) => s.trim())
       .filter(Boolean);
-    const title = trigger.querySelector(".showcase-card__title")?.textContent.trim() || "";
+    const title =
+      trigger.querySelector(".showcase-card__title")?.textContent.trim() ||
+      trigger.querySelector("img")?.alt.trim() ||
+      "";
     const descHTML = trigger.querySelector(".showcase-card__desc")?.innerHTML.trim() || "";
 
     mediaEl.innerHTML = "";
@@ -59,6 +71,7 @@
     });
     titleEl.textContent = title;
     captionEl.innerHTML = descHTML;
+    metaEl.classList.toggle("is-empty", !title && !descHTML);
 
     lastFocused = document.activeElement;
     lightbox.classList.add("is-active");

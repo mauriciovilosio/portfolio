@@ -910,6 +910,10 @@
   border-radius: calc(var(--radius-md) - 4px);
 }
 
+.lightbox__meta.is-empty {
+  display: none;
+}
+
 .lightbox__title {
   font-size: var(--fs-lg);
   color: var(--color-text-primary);
@@ -1151,10 +1155,72 @@
 }
 
 .gallery-grid img {
+  display: block;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   aspect-ratio: 4/3;
   object-fit: cover;
+}
+
+/* Clickable gallery item: an <img> wrapped in a <button data-lightbox-trigger>
+   so it can pop open the full image (see js/gallery.js). */
+.gallery-grid__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.gallery-grid__item img {
+  transition: transform var(--duration-slow) var(--ease-out-quart);
+}
+
+.gallery-grid__item:hover img,
+.gallery-grid__item:focus-visible img {
+  transform: scale(1.06);
+}
+
+.gallery-grid__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 13, 0.28);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-out-quart);
+}
+
+.gallery-grid__item:hover::after,
+.gallery-grid__item:focus-visible::after {
+  opacity: 1;
+}
+
+.gallery-grid__item svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%) scale(0.85);
+  color: var(--color-text-primary);
+  opacity: 0;
+  transition: opacity var(--duration-base) var(--ease-out-quart), transform var(--duration-base) var(--ease-out-quart);
+  pointer-events: none;
+}
+
+.gallery-grid__item:hover svg,
+.gallery-grid__item:focus-visible svg {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.gallery-grid__item:focus-visible {
+  outline: 2px solid var(--color-accent-lime);
+  outline-offset: 2px;
 }
 
 /* ---------- Reveal-on-scroll utility ---------- */
